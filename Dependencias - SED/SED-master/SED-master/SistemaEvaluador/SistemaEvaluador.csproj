@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5950AFAB-4C25-4B20-ADDA-D7C50DC9F05D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemaEvaluador</RootNamespace>
+    <AssemblyName>SistemaEvaluador</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=12.1.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DocX, Version=1.0.0.18, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocX.1.0.0.18\lib\net40\DocX.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CambioRangos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambioRangos.Designer.cs">
+      <DependentUpon>CambioRangos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colorcito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colorcito.Designer.cs">
+      <DependentUpon>Colorcito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoordenadaTriangular.cs" />
+    <Compile Include="Departamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Departamentos.Designer.cs">
+      <DependentUpon>Departamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dependientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dependientes.Designer.cs">
+      <DependentUpon>Dependientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DependientesEmpleados.cs" />
+    <Compile Include="Editar Indicadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar Indicadores.Designer.cs">
+      <DependentUpon>Editar Indicadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarGrados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarGrados.Designer.cs">
+      <DependentUpon>EditarGrados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadoNombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadoNombre.Designer.cs">
+      <DependentUpon>EmpleadoNombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpleadosComboBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmpleadosComboBox.Designer.cs">
+      <DependentUpon>EmpleadosComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado.cs" />
+    <Compile Include="Evaluacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evaluacion.Designer.cs">
+      <DependentUpon>Evaluacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EvaluacionGrupal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvaluacionGrupal.Designer.cs">
+      <DependentUpon>EvaluacionGrupal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EvaluacionNombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvaluacionNombre.Designer.cs">
+      <DependentUpon>EvaluacionNombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Evaluador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evaluador.Designer.cs">
+      <DependentUpon>Evaluador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EvaluarDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvaluarDepartamento.Designer.cs" />
+    <Compile Include="EvaluarDepartamento1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EvaluarDepartamento.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Grados_NoAsumidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grados_NoAsumidos.Designer.cs">
+      <DependentUpon>Grados_NoAsumidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grafica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grafica.Designer.cs">
+      <DependentUpon>Grafica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraficaDepto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraficaDepto.Designer.cs">
+      <DependentUpon>GraficaDepto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraficoBarras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraficoBarras.Designer.cs">
+      <DependentUpon>GraficoBarras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Individual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Individual.Designer.cs">
+      <DependentUpon>Individual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaEmpleados.Designer.cs">
+      <DependentUpon>ListaEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta.Designer.cs">
+      <DependentUpon>Meta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumeroTriangular.cs" />
+    <Compile Include="Ponderador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ponderador.Designer.cs">
+      <DependentUpon>Ponderador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Puntaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puntaje.Designer.cs">
+      <DependentUpon>Puntaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestiondePersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestiondePersonal.Designer.cs">
+      <DependentUpon>GestiondePersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grados.Designer.cs">
+      <DependentUpon>Grados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GradosInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GradosInicio.Designer.cs">
+      <DependentUpon>GradosInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="grados_Arr.cs" />
+    <Compile Include="Indicadores_Arr.cs" />
+    <Compile Include="Indicadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Indicadores.Designer.cs">
+      <DependentUpon>Indicadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rangos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rangos.Designer.cs">
+      <DependentUpon>Rangos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Terminos y resultado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Terminos y resultado.Designer.cs">
+      <DependentUpon>Terminos y resultado.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CambioRangos.resx">
+      <DependentUpon>CambioRangos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colorcito.resx">
+      <DependentUpon>Colorcito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Departamentos.resx">
+      <DependentUpon>Departamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dependientes.resx">
+      <DependentUpon>Dependientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar Indicadores.resx">
+      <DependentUpon>Editar Indicadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarGrados.resx">
+      <DependentUpon>EditarGrados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadoNombre.resx">
+      <DependentUpon>EmpleadoNombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpleadosComboBox.resx">
+      <DependentUpon>EmpleadosComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evaluacion.resx">
+      <DependentUpon>Evaluacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvaluacionGrupal.resx">
+      <DependentUpon>EvaluacionGrupal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvaluacionNombre.resx">
+      <DependentUpon>EvaluacionNombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evaluador.resx">
+      <DependentUpon>Evaluador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvaluarDepartamento.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EvaluarDepartamento1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestiondePersonal.resx">
+      <DependentUpon>GestiondePersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grados.resx">
+      <DependentUpon>Grados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GradosInicio.resx">
+      <DependentUpon>GradosInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grados_NoAsumidos.resx">
+      <DependentUpon>Grados_NoAsumidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grafica.resx">
+      <DependentUpon>Grafica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraficaDepto.resx">
+      <DependentUpon>GraficaDepto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraficoBarras.resx">
+      <DependentUpon>GraficoBarras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Indicadores.resx">
+      <DependentUpon>Indicadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Individual.resx">
+      <DependentUpon>Individual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaEmpleados.resx">
+      <DependentUpon>ListaEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meta.resx">
+      <DependentUpon>Meta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ponderador.resx">
+      <DependentUpon>Ponderador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Puntaje.resx">
+      <DependentUpon>Puntaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rangos.resx">
+      <DependentUpon>Rangos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terminos y resultado.resx">
+      <DependentUpon>Terminos y resultado.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crear_evaluacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gestion de personal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\evaluador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indicadores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\terminos y resultados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pesos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scientist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scientist1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indicadores1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\evaluador1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
